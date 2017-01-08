@@ -1,0 +1,18 @@
+$align : left, right, center;
+
+@each $a in $align{
+	.text-#{$a}{
+		text-align: $a;
+	}
+}
+
+.hide{
+	display: none !important;
+}
+
+.pull-left{
+	float: left;
+}
+.pull-right{
+	float: right;
+}

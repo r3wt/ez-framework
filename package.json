@@ -1,0 +1,17 @@
+{
+  "name": "ez-framework",
+  "version": "1.0.0",
+  "description": "ez to use responsive framework",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Garrett Morris <stuckinabox@live.com> (https://github.com/r3wt)",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "node-sass": "^4.1.1",
+    "uglify-js": "^2.7.5",
+    "uglifycss": "0.0.25"
+  }
+}

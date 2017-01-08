@@ -1,0 +1,7 @@
+/**
+ * ez-framework
+ * @version   {{version}}
+ * @copyright (c) 2017
+ * @license   MIT
+ * @build     {{date}}
+*/

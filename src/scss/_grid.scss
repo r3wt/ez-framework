@@ -1,0 +1,63 @@
+html,body{
+  box-sizing: border-box;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+	opacity: 0;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+.container{
+	max-width: 1200px;
+	width: 100%;
+	padding: $gutter;
+	margin: 0 auto;
+}
+
+//fluid container, and make container full width for mobile
+.container.fluid, 
+body.m .container{
+	max-width:none;
+}
+
+.row:before, 
+.row:after {
+	content:' ';
+	display: table ;
+	clear:both;
+}
+
+.col{
+	width: 100%;
+	float: left;
+	padding: $gutter;
+	min-height: 1px;
+}
+
+@each $size in $sizes{
+
+	body.#{$size} .col.#{$size}-hide{
+		display: none !important;
+	}
+
+	@for $i from 1 through $columns{
+		
+		body.#{$size} .col.#{$size}-#{$i}{
+			width: percentage($i/$columns);
+		}
+		
+		@if $i < $columns {
+			body.#{$size} .col.#{$size}-offset-#{$i}{
+				margin-left: percentage($i/$columns);
+			}
+		}
+		
+	}
+}
