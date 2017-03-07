@@ -13,6 +13,13 @@
 - no screen flicker
 - no dependencies; PERIOD!
 - familiar 12 column layout concept
+
+# notes
+-----
+1. ez automatically pulls in roboto font and material design icons from googlefonts.
+2. ez has a throttled window listener to check body sizes.
+3. the device detection is basic at this time, and the logical precendence is important for the detection to work. you can see explanation in src/ez.js `getSize()` function.
+
 	
 # roadmap
 -----
@@ -39,8 +46,12 @@
 <!-- its really this simple -->
 <script src="dist/ez.min.js"></script>
 ```
+
+# js documentation
+-----
+none yet.
 	
-# documentation
+# css documentation
 -----
 
 1. `.row` - a row of columns
