@@ -9,7 +9,7 @@
     }
 	
 	function size(){
-		b.classList = "";
+		b.classList = '';
 		b.classList.add(getSize());
 	}
 	
@@ -61,7 +61,7 @@
     //init
     // 1. add css to body
     create('link', { href: 'https://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic|Material+Icons', rel: 'stylesheet' });
-	create('style', { innerHTML: "{{css}}" });
+	create('style', { innerHTML: '{{css}}' });
 	
     // 2. size
     size();

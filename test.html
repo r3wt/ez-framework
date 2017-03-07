@@ -7,29 +7,72 @@
 </head>
 <body>
 <div class="row">
-<div class="container">
-<div class="col m-12 t-6 d-4 hd-4">
-Test 1
-</div>
-<div class="col m-12 t-6 d-4 hd-4">
-	<div class="loading" style="height: 200px">
+	<div class="container">
+		<div class="col text-center">
+			<h4>row, container, 3 columns</h4>
+		</div>
+		<div class="col m-12 t-6 d-4 hd-4 text-center">
+			<p>Test 1</p>
+		</div>
+		<div class="col m-12 t-6 d-4 hd-4 text-center">
+			<p>Test 2</p>
+		</div>
+		<div class="col m-12 t-6 d-4 hd-4 text-center">
+			<p>Test 3</p>
+		</div>
 	</div>
 </div>
-<div class="col m-12 t-6 d-4 hd-4">
-Test 3
+<div class="row">
+	<div class="container">
+		<div class="col text-center">
+			<h4>row, container, offset column with loading indicator</h4>
+		</div>
+		<div class="col t-6 t-offset-3 d-6 d-offset-3 hd-6 hd-offset-3">
+			<div class="loading"></div>
+		</div>
+	</div>
 </div>
-<div class="col">
-<h1>H1</h1>
-<h2>H2</h2>
-<h3>H3</h3>
-<h4>H4</h4>
-<h5>H5</h5>
-<h6>H6</h6>
+<div class="row">
+	<div class="container">
+		<div class="col text-center">
+			<h4>row, container, and offset column with typography typography</h4>
+		</div>
+		<div class="col t-2 t-offset-5 d-2 d-offset-5 hd-2 hd-offset-5 text-center">
+			<h1>H1</h1>
+			<h2>H2</h2>
+			<h3>H3</h3>
+			<h4>H4</h4>
+			<h5>H5</h5>
+			<h6>H6</h6>
+			<p>P</p>
+		</div>
+	</div>
 </div>
-<div class="col d-12 m-6 t-6 hd-4">
-	test
-</div>
-</div>
+<div class="row">
+	<div class="container">
+		<div class="col text-center">
+			<h4>row, container, offset column with form-components</h4>
+		</div>
+		<div class="col t-3 t-offset-3 d-6 d-offset-3 hd-6 hd-offset-3">
+			<div class="form-group">
+				<label>Some Input</label>
+				<input class="input" type="text" value="Text">
+			</div>
+			<div class="form-group">
+				<label>Another Input</label>
+				<select class="input">
+					<option value="1">Select</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label>Final Input</label>
+				<textarea class="input">Textarea</textarea>
+			</div>
+			<div class="form-group">
+				<button class="btn">Submit</button>
+			</div>
+		</div>
+	</div>
 </div>
 <script src="dist/ez.min.js"></script>
 </body>

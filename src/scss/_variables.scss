@@ -1,9 +1,18 @@
-$gutter: 0 12px; // size of gutter
+$gutter: 1.5rem; // size of gutter (margin-bottom, padding-left, padding-right)
 $columns: 12; // the number of columns
 $sizes: m t d hd; // mobile, tablet, desktop, huge-desktop
 $base_font_color: #212121;
 $base_font_face: Roboto,sans-serif;
-$margin: 2rem;
-$h1_size: 4; //largest heading size
-$h1_scale: .4; //decrease font size of headings by this amount
+$base_font_size: 1.4rem;
+$h1_size: 4.8; //largest heading size
+$h1_scale: .6; //decrease font size of headings by this amount
 $loader_size: 32px; //width/height of the loading indicator
+$button_sizes: (
+	sm: 18px,
+	md: 32px,
+	lg: 46px,
+);
+$default_border_color: rgba(51,51,51,.25);
+$default_box_shadow: 0 0 2px rgba(10, 10, 10, 0.25);
+$contrast_border_color: rgba(51,51,51,.8);
+$contrast_font_color: #fff;

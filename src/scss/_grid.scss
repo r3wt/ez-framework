@@ -16,7 +16,7 @@ body {
 .container{
 	max-width: 1200px;
 	width: 100%;
-	padding: $gutter;
+	padding: 0 $gutter;
 	margin: 0 auto;
 }
 
@@ -35,7 +35,7 @@ body {
 .col{
 	width: 100%;
 	float: left;
-	padding: $gutter;
+	padding: 0 $gutter;
 	min-height: 1px;
 }
 

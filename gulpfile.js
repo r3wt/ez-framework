@@ -30,13 +30,12 @@ gulp.task('default', function() {
 			'{{version}}': VERSION,
 			'{{date}}': getBuildDate()
 		};
+		//the following code is order dependent; css insertion must come after minification because uglify will choke on the css.
+		//specifically, it chokes on the url encoded svg background image of selects.
 		//replace placeholders in copyright
 		for(var prop in replace){
 			copyright = copyright.replace(prop,replace[prop]);
 		}
-		//uglify the css and add it into the javascript code
-		var result_css = result.css.toString();
-		code = code.replace('{{css}}',uglifycss.processString(result_css));
 		//now uglify the code and compress it as small as possible
 		var ast = ugly.parse(code); // parse code and get the initial AST
 		ast.figure_out_scope();
@@ -45,6 +44,10 @@ gulp.task('default', function() {
         ast.compute_char_frequency();
 		ast.mangle_names();
 		var final_code = ast.print_to_string(); 
+		//finally, uglify the css and add it into the javascript code
+		var result_css = result.css.toString();
+		final_code = final_code.replace('{{css}}',uglifycss.processString(result_css).replace(/"/g,'\''));//the processed css must be escaped
+		
 		//concat copyright and code and write to the dist folder.
 		fs.writeFile('./dist/ez.min.js',copyright + "\r\n" + final_code, 'utf8',function(){
 			console.log('built ez.min.js successfully');
