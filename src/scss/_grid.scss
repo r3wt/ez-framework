@@ -1,5 +1,4 @@
 html,body{
-  box-sizing: border-box;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -11,7 +10,7 @@ body {
 *,
 *::before,
 *::after {
-	box-sizing: inherit;
+	box-sizing: border-box;
 }
 
 .container{
@@ -22,8 +21,7 @@ body {
 }
 
 //fluid container, and make container full width for mobile
-.container.fluid, 
-body.m .container{
+.container.fluid{
 	max-width:none;
 }
 
@@ -48,12 +46,13 @@ body.m .container{
 	}
 
 	@for $i from 1 through $columns{
-		
-		body.#{$size} .col.#{$size}-#{$i}{
-			width: percentage($i/$columns);
-		}
-		
+	
 		@if $i < $columns {
+			// .col .{size}-12 can be covered by just .col, so omit it to save size.
+			body.#{$size} .col.#{$size}-#{$i}{
+				width: percentage($i/$columns);
+			}
+		
 			body.#{$size} .col.#{$size}-offset-#{$i}{
 				margin-left: percentage($i/$columns);
 			}

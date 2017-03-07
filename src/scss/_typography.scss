@@ -11,11 +11,7 @@ body {
 a{
 	text-decoration: none;
 	color: #337ab7;
-	font-size: 1.3rem;
-}
-
-a.underline{
-	text-decoration: underline;
+	font-size: inherit;
 }
 
 a:hover {
@@ -23,7 +19,7 @@ a:hover {
 }
 
 p {
-	font-size: 1.3rem;
+	font-size: inherit;
 }
 
 h1,
@@ -43,7 +39,7 @@ h6 {
 	}
 }
 
-ul{
+ol,ul{
 	list-style-type: none;
 	list-style-position: outside;
 	padding:0;
