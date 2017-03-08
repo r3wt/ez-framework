@@ -1,29 +1,35 @@
 .btn{
-	height: 3.6rem;
-	padding: .6rem 1rem .75rem;
 	background: transparent;
 	border: none;
 	cursor: pointer;
 	text-transform: uppercase;
+	transition: .3s ease-out;
+	font-size: 1.6rem;
+	font-weight: 500;
+	padding: .75rem 1.6rem;
+}
+.btn[disabled]{
+	color: #9F9F9F !important;
+	cursor: normal;
 }
 
 .btn:hover{
-	border-color: transparent;
 	background-color: $default_border_color;
 }
 
 .input{
 	width: 100%;
-	padding: .6rem 1rem .75rem;
 	outline: none;
 	border: 1px solid $default_border_color;
 	box-shadow: inset $default_box_shadow;
-	transition: border-color .25s ease-in;
+	transition: border-color .3s ease-out;
+	font-size: 1.5rem;
+	padding: .75rem 1rem;
 }
 
 .input:focus{
 	border-color: $contrast_border_color;
-	transition: border-color .25s ease-out;
+	transition: border-color .3s ease-out;
 }
 
 label{
@@ -37,9 +43,9 @@ label{
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
-	font-size: 1.5rem;
 	font-family: inherit;
-	font-weight: normal;
+	border-radius: 2px;
+	height: 3.6rem;
 }
 
 input.input{

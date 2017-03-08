@@ -8,7 +8,6 @@
 	- mobile
 	- tablet
 	- desktop
-	- huge desktop
 - needs to render fast
 - no screen flicker
 - no dependencies; PERIOD!
@@ -58,8 +57,11 @@ none yet.
 4. `.col.m-{1-11}` m stands for **mobile**. width of element is 100 / number (in percent), same as bootstrap and foundation.
 5. `.col.t-{1-11}` t stands for **tablet**. width of element is 100 / number (in percent), same as bootstrap and foundation.
 6. `.col.d-{1-11}` m stands for **desktop**. width of element is 100 / number (in percent), same as bootstrap and foundation.
-7. `.col.hd-{1-11}` hd stands for **huge-desktop**. width of element is 100 / number (in percent), same as bootstrap and foundation.
 8. `.loading(.hide-contents)` attaching this class will overlay an element with an loading indicator animation. add `.hide-contents` to hide all other children of the element.
 9. `.input` works on textarea,select,and inputs. 
 10. `.btn` to be used on buttons, links, and input[type="button"] extra classes coming soon.
 11. `.form-group` provides a bottom margin to a group of form inputs. identical to the same concept in bootstrap.
+12. `.checkbox` coming soon
+13. `.radio` coming soon
+14. `.switch` coming soon
+15. `.slider` coming soon

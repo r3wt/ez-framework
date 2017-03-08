@@ -49,7 +49,7 @@ gulp.task('default', function() {
 		final_code = final_code.replace('{{css}}',uglifycss.processString(result_css).replace(/"/g,'\''));//the processed css must be escaped
 		
 		//concat copyright and code and write to the dist folder.
-		fs.writeFile('./dist/ez.min.js',copyright + "\r\n" + final_code, 'utf8',function(){
+		fs.writeFile('./dist/ez.min.js',copyright + final_code, 'utf8',function(){
 			console.log('built ez.min.js successfully');
 		});
 	

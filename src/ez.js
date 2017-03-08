@@ -30,9 +30,6 @@
 		//for emulation
 		if(y < 1024) return 't';
 		
-		//probably a huge desktop
-		if(y > 1920) return 'hd';
-		
 		//basic tablet support
 		if(x.match(/android|ipad|playbook|silk/i)) return 't';
 
@@ -43,7 +40,7 @@
 		if(z<=8 && x.match(/android/i)) return 't';
 
 		//probably a desktop/laptop
-		if(x.match(/\bCrOs\b/) || s.match(/Win|Mac|Sun|Linux|HP|Opera/)) return 'd';
+		if(y > 1920 || x.match(/\bCrOs\b/) || s.match(/Win|Mac|Sun|Linux|HP|Opera/)) return 'd';
 		
 		return 'm';// when in doubt, serve mobile?
 	}
@@ -60,7 +57,7 @@
    
     //init
     // 1. add css to body
-    create('link', { href: 'https://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic|Material+Icons', rel: 'stylesheet' });
+    create('link', { href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons', rel: 'stylesheet' });
 	create('style', { innerHTML: '{{css}}' });
 	
     // 2. size
