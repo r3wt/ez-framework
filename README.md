@@ -3,7 +3,7 @@
 # abstract
 -----
 - to provide as small as possible file size.
-- deliver a basic unstyled responsive framework in a single javascript file.
+- deliver an extensible responsive framework in a single javascript file.
 - instead of using media queries, use a simple concept of device type:
 	- mobile
 	- tablet
@@ -12,6 +12,11 @@
 - no screen flicker
 - no dependencies; PERIOD!
 - familiar 12 column layout concept
+- to be easily customizeable and extendable
+	1. drop in sass dependencies
+	2. edit sass
+	3. edit js
+	4. recompile
 
 # notes
 -----

@@ -9,7 +9,7 @@
     }
 	
 	function size(){
-		b.classList = '';
+		b.classList.remove('m','d','t');
 		b.classList.add(getSize());
 	}
 	
@@ -17,35 +17,34 @@
 		var s = navigator.platform || '',
 			t = isMobile(),
 			u = w.devicePixelRatio || -1,
-			x = navigator.userAgent||navigator.vendor||w.opera,
+			x = navigator.userAgent||navigator.vendor||w.opera||'',
 			y = w.innerWidth,
 			z = navigator.hardwareConcurrency || -1;
 			
 		// regex match or old phone built in browser
-		if(t || (z == -1 && y < 768) ) return 'm';
-		
-		//for emulation
-		if(y < 768) return 'm';
-		
-		//for emulation
-		if(y < 1024) return 't';
+		if(
+			t || 
+			(z == -1 && y < 768) || 
+			y < 768 || 
+			u > 1 && x.match('/SAMSUNG-SGH/') && z <= 8
+		) return 'm';
 		
 		//basic tablet support
-		if(x.match(/android|ipad|playbook|silk/i)) return 't';
-
-		//samsung galaxy have up to 8 cores and pixel ratio always greater than 1
-		if(u > 1 && x.match('/SAMSUNG-SGH/') && z <= 8) return 'm';
-		
-		// probably an android tablet
-		if(z<=8 && x.match(/android/i)) return 't';
+		if(
+			x.match(/android|ipad|playbook|silk/i) || 
+			y < 1024 ||
+			z<=8 && x.match(/android/i)
+		) return 't';
 
 		//probably a desktop/laptop
-		if(y > 1920 || x.match(/\bCrOs\b/) || s.match(/Win|Mac|Sun|Linux|HP|Opera/)) return 'd';
+		if(
+			y > 1920 || 
+			x.match(/\bCrOs\b/) || 
+			s.match(/Win|Mac|Sun|Linux|HP|Opera/)
+		) return 'd';
 		
 		return 'm';// when in doubt, serve mobile?
 	}
-	
-	w.getSize = getSize;
     
     function create( el, props ){
 		var s = d.createElement(el);
